@@ -1,1 +1,1 @@
-web: gunicorn app:deploy
+web: pip install -r requirements.txt && python deploy.py
