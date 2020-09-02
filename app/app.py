@@ -10,7 +10,7 @@ def create_app(app_name='NewsAPI'):
     app = Flask(app_name)
     app.config.from_object('app.config.Config')
 
-    cors = CORS(app, resources={r"/api/*": {"origins": "http://127.0.0.1:3000", "methods": "GET,PUT,POST,DELETE"}})
+    cors = CORS(app, resources={r"/api/*": {"origins": "*", "methods": "GET,PUT,POST,DELETE"}})
 
     app.register_blueprint(api, url_prefix="/api")
 
